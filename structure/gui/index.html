@@ -1,0 +1,147 @@
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>gui &mdash; emesene v2.0 documentation</title>
+    <link rel="stylesheet" href="../../_static/default.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '2.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="emesene v2.0 documentation" href="../../" />
+    <link rel="up" title="Project Structure" href="../" />
+    <link rel="next" title="themes" href="../themes/" />
+    <link rel="prev" title="interfaces" href="../interfaces/" /> 
+  </head>
+  <body>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex/" title="General Index"
+             accesskey="I">index</a></li>
+        <li class="right" >
+          <a href="../themes/" title="themes"
+             accesskey="N">next</a> |</li>
+        <li class="right" >
+          <a href="../interfaces/" title="interfaces"
+             accesskey="P">previous</a> |</li>
+        <li><a href="../../">emesene v2.0 documentation</a> &raquo;</li>
+          <li><a href="../" accesskey="U">Project Structure</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body">
+            
+  <div class="section" id="gui">
+<h1>gui<a class="headerlink" href="#gui" title="Permalink to this headline">¶</a></h1>
+<p>gui is the base module that contains different implementations of the emesene
+GUI with different toolkits.</p>
+<p>emesene is structured in a way that allows multiple GUIs to be implemented
+with the same functionality moving all the client logic to modules that are
+toolkit independent.</p>
+<div class="section" id="base">
+<h2>base<a class="headerlink" href="#base" title="Permalink to this headline">¶</a></h2>
+<p>The base module contains all the functionality that is GUI independent and
+abstract implementations that must be implemented by the toolkits.</p>
+<p>This module contains code to handle Themes, Adium themes, to Handle the
+responses from the dialogs, stock constants for things as responses and icons
+and abstract classes for complex things such as ContactList, Conversation etc.</p>
+<p>The developers should aim to move the maximum amount of code to gui.base so it
+can be reused by multiple frontends and to make the toolkit dependent code as
+minimal as possible.</p>
+</div>
+<div class="section" id="gtkui">
+<h2>gtkui<a class="headerlink" href="#gtkui" title="Permalink to this headline">¶</a></h2>
+<p>This module contains all the GTK dependent code for all the widgets that are
+needed to build the GUI.</p>
+<p>Some classes extend classes defined in gui.base, some of them are full
+implementations.</p>
+<p>The code is divided in modules that implement different widgets and are
+registered as extensions for different categories, see the extension
+documentation for more information about this.</p>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar">
+        <div class="sphinxsidebarwrapper">
+  <h3><a href="../../">Table Of Contents</a></h3>
+  <ul>
+<li><a class="reference internal" href="#">gui</a><ul>
+<li><a class="reference internal" href="#base">base</a></li>
+<li><a class="reference internal" href="#gtkui">gtkui</a></li>
+</ul>
+</li>
+</ul>
+
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="../interfaces/"
+                        title="previous chapter">interfaces</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="../themes/"
+                        title="next chapter">themes</a></p>
+  <h3>This Page</h3>
+  <ul class="this-page-menu">
+    <li><a href="../../_sources/structure/gui.txt"
+           rel="nofollow">Show Source</a></li>
+  </ul>
+<div id="searchbox" style="display: none">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search/" method="get">
+      <input type="text" name="q" size="18" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="../../genindex/" title="General Index"
+             >index</a></li>
+        <li class="right" >
+          <a href="../themes/" title="themes"
+             >next</a> |</li>
+        <li class="right" >
+          <a href="../interfaces/" title="interfaces"
+             >previous</a> |</li>
+        <li><a href="../../">emesene v2.0 documentation</a> &raquo;</li>
+          <li><a href="../" >Project Structure</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer">
+        &copy; Copyright 2010, Mariano Guerra, C10uD.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.0.1.
+    </div>
+  </body>
+</html>

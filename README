@@ -1,0 +1,11 @@
+HOWTO BUILD DOCUMENTATION:
+- fetch a copy of the emesene repository in github
+- install python-sphinx
+- cd to emesene/docs
+- make dirhtml
+- overwrite the files in the emesene-docs repo with the generated ones
+- commit and push
+- ???
+- profit!!!
+
+NOTE: the docs will be at http://emesene.github.com/emesene-docs
